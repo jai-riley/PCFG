@@ -12,9 +12,9 @@ def get_total_perplexity(surprisals):
 
 
 def train_and_parse(t, data_type):
-    src = '/Users/jairiley/Desktop/BOW_Ngrams/PCFG/incremental-top-down-parser/'
-    train_data = f'/Users/jairiley/Desktop/BOW_Ngrams/corpus/{data_type}_trees/wiki_train_{data_type}_trees_normalized.txt'
-    validation_data = f'/Users/jairiley/Desktop/BOW_Ngrams/corpus/{data_type}_trees/wiki_validation_{data_type}_trees_normalized.txt'
+    src = 'incremental-top-down-parser/'
+    train_data = f'corpus/{data_type}_trees/wiki_train_{data_type}_trees_normalized.txt'
+    validation_data = f'corpus/{data_type}_trees/wiki_validation_{data_type}_trees_normalized.txt'
 
     model_name = f'{src}model/wiki_full_model_{data_type}_t_{t}'
     output_path = f'{src}model/parse_dev_{data_type}_t_{t}.output'
