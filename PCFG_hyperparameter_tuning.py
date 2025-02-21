@@ -24,10 +24,10 @@ def train_and_parse(t, data_type):
     train_command = f'{src}bin/tdptrain -t{t} -p -s"(SINV(S" -v -F {model_name} -m {src}data/tree.functs.sfile {train_data}'
     os.system(train_command)
     print("train done")
-
+    
     # if not os.path.exists(output_path):
     print("parse start")
-    parse_command = f'{src}bin/tdparse -v -p -F {output_path} {model_name} {validation_data}'
+    parse_command = f'{src}bin/tdparse -v -p -F {output_path} {model_name} {data_path}'
     os.system(parse_command)
 
     return output_path
